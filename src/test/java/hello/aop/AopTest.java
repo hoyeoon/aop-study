@@ -14,7 +14,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 
 @Slf4j
 @SpringBootTest
-@Import(AspectV2Pointcut.class) // 스프링 bean 으로 등록 된다.
+@Import({AspectV2Order.LogAspect.class, AspectV2Order.TxAspect.class}) // 스프링 bean 으로 등록 된다.
 public class AopTest {
 
     @Autowired
